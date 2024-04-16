@@ -1,7 +1,7 @@
 # obsidian-block-mirror
 Plugin to mirror blocks.
 
-Example: Create a block in one file (e.g. `- [ ] Task ^abc`) and copy the block (just simple copy-paste) including the same block id to another file. The plugin will mirror any changes to that line, e.g. when you're changing te task to `- [x] Task ^abc` it will be reflected in both files (also e.g. when using the Tasks plugin to change the task). For now it will update any changes from the current files to all other files that contain the same block id. 
+Example: Create a single-line block in one file (e.g. with the content `- [ ] Task ^abc`) and copy the block (just simple copy-paste) including the block id to another file. The plugin will mirror any changes to the line with the block id, e.g. when you're changing te task to `- [x] Task ^abc` it will be reflected in both files (also e.g. when using the Tasks plugin to change the task). For now it will update any changes from the current files to all other files that contain the same block id. 
 
 ## Installation
 This plugin is currently a proof-of-concept! ⚠️ Use at your own risk ⚠️. This plugin writes to your vault and could be doing things wrong and overwrite every file in your vault. Best tried on a demo vault!
@@ -11,6 +11,8 @@ This plugin is currently a proof-of-concept! ⚠️ Use at your own risk ⚠️.
 - `npm run dev` to start compilation in watch mode.
 
 ## Caveats / bugs
+- I think the block identifier can be anywhere in the line (have not checked), but it ignores block identifiers e.g. in internal links. It uses the `cachedMetadata.blocks` to find blocks based on what Obsidian thinks is a block
+- Obsidian only considers specific things as 'blocks' (e.g. tasks, list items, heading, but not multiple lines in the same paragraph)
 - When using with tasks and crossing off many items at the same time (and with multiple files open that contain mirrored blocks) it can create a race condition
 - Currently it only considers single-line blocks
 
