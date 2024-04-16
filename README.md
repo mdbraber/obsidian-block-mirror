@@ -1,5 +1,7 @@
 # obsidian-block-mirror
-Plugin to mirror blocks. Create an empty block in one file (e.g. `^abc`) and when you create a block with the same block id in another file, e.g.  `- [ ] Task ^abc`. The plugin will mirror the task to the first file. For now it will update any changes from the current files to all other files that contain the same block id.
+Plugin to mirror blocks.
+
+Example: Create a block in one file (e.g. `- [ ] Task ^abc`) and copy the block (just simple copy-paste) including the same block id to another file. The plugin will mirror any changes to that line, e.g. when you're changing te task to `- [x] Task ^abc` it will be reflected in both files (also e.g. when using the Tasks plugin to change the task). For now it will update any changes from the current files to all other files that contain the same block id. 
 
 ## Installation
 This plugin is currently a proof-of-concept! ⚠️ Use at your own risk ⚠️. This plugin writes to your vault and could be doing things wrong and overwrite every file in your vault. Best tried on a demo vault!
@@ -7,6 +9,12 @@ This plugin is currently a proof-of-concept! ⚠️ Use at your own risk ⚠️.
 - Make sure your NodeJS is at least v16 (node --version).
 - `npm i` or `yarn` to install dependencies.
 - `npm run dev` to start compilation in watch mode.
+
+## Caveats / bugs
+- When using with tasks and crossing off many items at the same time (and with multiple files open that contain mirrored blocks) it can create a race condition
+- Currently it only considers single-line blocks
+
+It's just a proof-of-concept for now, so there are probably a ton of things you could consider a bug, be careful!
 
 ## Idea
 See this discussion: https://forum.obsidian.md/t/synced-lines-or-blocks-for-obsidian/80354
