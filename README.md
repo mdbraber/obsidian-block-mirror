@@ -2,7 +2,7 @@
 Plugin to mirror blocks. Create an empty block in one file (e.g. `^abc`) and when you create a block with the same block id in another file, e.g.  `- [ ] Task ^abc`. The plugin will mirror the task to the first file. For now it will update any changes from the current files to all other files that contain the same block id.
 
 ## Installation
-This plugin is currently a proof-of-concept, use at your own risk.
+This plugin is currently a proof-of-concept! ⚠️ Use at your own risk ⚠️. This plugin writes to your vault and could be doing things wrong and overwrite everyfile in your vault. Best tried on a demo vault!
 
 - Make sure your NodeJS is at least v16 (node --version).
 - `npm i` or `yarn` to install dependencies.
