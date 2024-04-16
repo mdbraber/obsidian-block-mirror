@@ -1,0 +1,10 @@
+{
+	"id": "block-mirror-plugin",
+	"name": "Block mirror",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Automatically mirror blocks",
+	"author": "Obsidian",
+	"authorUrl": "https://github.com/mdbraber/obsidian-block-mirror",
+	"isDesktopOnly": false
+}

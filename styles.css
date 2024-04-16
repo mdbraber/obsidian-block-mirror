@@ -1,0 +1,26 @@
+.metadata-property[data-property-key="block-mirror"] {
+  --pill-color: var(--tag-color);
+  --pill-color-hover: var(--tag-color-hover);
+  --pill-color-remove: var(--tag-color);
+  --pill-color-remove-hover: var(--tag-color-hover);
+  --pill-decoration: var(--tag-decoration);
+  --pill-decoration-hover: var(--tag-decoration-hover);
+  --pill-background: var(--background);
+  --pill-background-hover: var(--tag-background-hover);
+  --pill-border-color: var(--tag-background);
+  --pill-border-color-hover: var(--tag-border-color-hover);
+  --pill-border-width: 1px;
+  --pill-padding-x: var(--tag-padding-x);
+  --pill-padding-y: var(--tag-padding-y);
+  --pill-radius: var(--tag-radius);
+  --pill-weight: var(--tag-weight);
+  --pill-focus-width: 100%;
+  --pill-focus-left-adjust: 0;
+}
+.metadata-property[data-property-key="block-mirror"] .multi-select-pill {
+  cursor: var(--cursor-link);
+}
+
+.metadata-container {
+  margin-block-end: 0px;
+}
